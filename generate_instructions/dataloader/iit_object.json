@@ -1,0 +1,12 @@
+{
+    "bowl": 0,
+    "tvm": 1,
+    "pan": 2,
+    "hammer": 3,
+    "knife": 4,
+    "cup": 5,
+    "drill": 6,
+    "racket": 7,
+    "spatula": 8,
+    "bottle": 9
+}

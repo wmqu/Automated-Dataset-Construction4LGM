@@ -1,0 +1,19 @@
+{
+    "bowl": 1,
+    "cup": 2,
+    "hammer": 3,
+    "knife": 4,
+    "ladle": 5,
+    "mallet": 6,
+    "mug": 7,
+    "pot": 8,
+    "saw": 9,
+    "scissors": 10,
+    "scoop": 11,
+    "shears": 12,
+    "shovel": 13,
+    "spoon": 14,
+    "tenderizer": 15,
+    "trowel": 16,
+    "turner": 17
+}
