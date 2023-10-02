@@ -5,7 +5,7 @@
 ```bash
 pip install -r requirements.txt
 ```
-### 1. Available Architectures
+### 2. Available Architectures
 Specify the model architecture with '--model ARCH_NAME' and set the output stride using '--output_stride OUTPUT_STRIDE'.
 
 | DeepLabV3    |  DeepLabV3+        |
@@ -16,11 +16,11 @@ Specify the model architecture with '--model ARCH_NAME' and set the output strid
 
 All pretrained models: [Dropbox](https://www.dropbox.com/sh/w3z9z8lqpi8b2w7/AAB0vkl4F5vy6HdIhmRCTKHSa?dl=0), [Tencent Weiyun](https://share.weiyun.com/qqx78Pv5)
 
-### 2. Load the pretrained model:
+### 3. Load the pretrained model:
 ```python
 model.load_state_dict( torch.load( CKPT_PATH )['model_state']  )
 ```
-### 3. Visualize segmentation outputs:
+### 4. Visualize segmentation outputs:
 ```python
 outputs = model(images)
 preds = outputs.max(1)[1].detach().cpu().numpy()
@@ -29,14 +29,14 @@ colorized_preds = val_dst.decode_target(preds).astype('uint8') # To RGB images, 
 colorized_preds = Image.fromarray(colorized_preds[0]) # to PIL Image
 ```
 
-### 4. Atrous Separable Convolution
+### 5. Atrous Separable Convolution
 
 **Note**: pre-trained models in this repo **do not** use Seperable Conv.
 
 Atrous Separable Convolution is supported in this repo. We provide a simple tool ``network.convert_to_separable_conv`` to convert ``nn.Conv2d`` to ``AtrousSeparableConvolution``. **Please run main.py with '--separable_conv' if it is required**. See 'main.py' and 'network/_deeplab.py' for more details. 
 
 
-### 5. Performance on IIT-AFF (9 affordance) and UMD (7 affordance)
+### 6. Performance on IIT-AFF (9 affordance) and UMD (7 affordance)
 
 Training: 256x256 random crop  
 validation: 256x256 center crop
@@ -49,12 +49,12 @@ Model: DeepLabV3-ResNet50
 |    UMD      |   0.994    |    0.940    | 0.988 |   0.878     |  
 
 
-### 6. Training and Testing
+### 7. Training and Testing
 
-#### 6.1 Training
+#### 7.1 Training
 Run main.py for training and validation.
 
-#### 6.2 Continue training
+#### 7.2 Continue training
 
 Run main.py with '--continue_training' to restore the state_dict of optimizer and scheduler from YOUR_CKPT.
 
@@ -62,7 +62,7 @@ Run main.py with '--continue_training' to restore the state_dict of optimizer an
 python main.py ... --ckpt YOUR_CKPT --continue_training
 ```
 
-#### 6.3 generate single object mask
+#### 7.3 generate single object mask
 
 Run predict.py and use the generated weights to predict the cropped regions’ part-level affordance mask. 
 

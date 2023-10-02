@@ -45,7 +45,7 @@ In this experiment, ResNet50 is used.
 * The tool offers a lot of templates, we use the manual template
 * The template is '{"placeholder":"text_a"}.In other words, give me something to {"mask"}'
 * Define a pre-trained language model, we use the gpt2 as a pre-trained language model
-* A `Verbalizer` is another important (but not necessary) in prompt-learning, which projects the original labels (we have defined them as `classes`, remember?) to a set of label words.
+* A `Verbalizer` is another important (but not necessary) in prompt-learning, which projects the original labels (we have defined them as `classes`) to a set of label words.
 
 ## Positional Relationship
 The spatial relationship of two dimensions: horizontal (left, middle and right), vertical (top and bottom).
