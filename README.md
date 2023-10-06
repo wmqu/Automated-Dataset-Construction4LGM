@@ -6,16 +6,14 @@
 ```
     /IIT_Affordance 
         /train 
-            /mask_object #  <=store affordances labels at pixel-level for each image
             /rgb # <= store original rgb image
-            /single_object_mask # <= store cropped rgb image by Faster-RCNN and CLIP
+            /part_level_mask # <= store part-level segmentation mask
                 /00_00000090 # <= The folder name is the image name 
                     /00_00000090_0_0.png # <= single object affordance mask, the first 0 corresponds to the index of the value array in the JSON file, the second 0 represents the index of the object’s explicit instruction array.
                     /00_00000090_1_1.png
                     /00_00000090_2_0.png
                     /00_00000090_2_1.png
                 ...    
-            /xml # <= store locations of objects in each image
             /iit_train.json # <= store the instructions and box corresponding to the objects in the image
         ...
 ```
@@ -70,15 +68,16 @@ take image 00_00000090.jpg as an example
     }
   ]}
 ```
+### 1.3. Download link
+[generated_dataset_iit](https://drive.google.com/uc?export=download&id=1g64XGyUn0XsT1PczEQ3UcltUpEdhObff)
 ## 2. UMD Dataset
 ### 2.1 UMD Dataset File Directory
 
 ```
     /UMD
         /train 
-            /mask_object #  <=store affordances labels at pixel-level for each image
             /rgb # <= store original rgb image
-            /single_object_mask # <= store cropped rgb image by Faster-RCNN and CLIP
+            /part_level_mask # <= store part-level segmentation mask
                 /bowl_01_00000002_rgb # <= The folder name is the image name 
                     /bowl_01_00000002_rgb_0_0.png # <= single object affordance mask, the first 0 corresponds to the index of the value array in the JSON file, the second 0 represents the index of the object’s explicit instruction array.
                 ... 
@@ -106,3 +105,5 @@ take image 00_00000090.jpg as an example
     }]
  }
 ```
+### 2.3. Download link 
+[generated_dataset_umd](https://drive.google.com/uc?export=download&id=1BUndfCp0xcUsmw99x0MhNSQvLxXotmyl)

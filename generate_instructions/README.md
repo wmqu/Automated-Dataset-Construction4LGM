@@ -28,10 +28,10 @@
 ```
 ## Prepare Datasets
 * IIT-AFF dataset is made up of 8,835 real-world images with corresponding locations of objects and affordances labels
-at pixel-level for each image. This dataset has 10 object categories and 9 affordance classes. IIT-AFF dataset download link：https://sites.google.com/site/iitaffdataset/
+at pixel-level for each image. This dataset has 10 object categories and 9 affordance classes. [IIT-AFF dataset download link](https://sites.google.com/site/iitaffdataset/)
 * UMD dataset consists of 28843 RGB-D images for 105 kitchen, workshop, and gardening tools. This dataset does not
 provide the location of the object bounding boxes, we calculate the coordinates of the object bounding boxes by using the
-affordance mask. The dataset contains 17 object categories and 7 affordance classes. UMD dataset download link：https://users.umiacs.umd.edu/~fer/affordance/Affordance.html
+affordance mask. The dataset contains 17 object categories and 7 affordance classes. [UMD dataset download link](https://users.umiacs.umd.edu/~fer/affordance/Affordance.html)
 
 For each dataset, the dataset is randomly divided into training, validation and testing sets with ratio 8:1:1.
 
